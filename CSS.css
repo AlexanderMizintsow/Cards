@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2? family= Lobster & display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("1112222.jpg") no-repeat;
+    background-size: 100%;
+    font-family: 'Lobster', cursive;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    color: #9d50bb;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    place-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transition: 2s ease-in-out;
+    backface-visibility: hidden;
+    background: linear-gradient(#9d50bb, #6e48aa, #4b1248);
+    border: aqua 1px solid;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding-left: 10px;
+
+}
+
+.back {
+    transform: rotateY(180deg);
+
+}
+
+.card:hover .front, .back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
